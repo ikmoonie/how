@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Time Low</title>
+    <link rel="icon" href="https://i.pinimg.com/originals/9b/62/9a/9b629a0c0c4b3be67fb6cb8069aa32c3.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .conteudo {
+            height: 100vh;
+        }
+
+        .img-background {
+
+            background-position: center;
+            background-size: cover;
+            background-position-x: ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #27181c;
+            background-repeat: no-repeat;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            border-bottom: 1px solid white;
+            margin-top: 30px;
+            opacity: 0.5;
+            background-color: black;
+            padding: 10px 10px;
+            border-radius: 0 30px 30px 0;
+        }
+
+        .menu ul li {
+            margin-left: 25px;
+            font-size: 25px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Gloria Hallelujah';
+        }
+
+        .sobre {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .carinha {
+            width: 1350px;
+            height: 600px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .carinha h1 {
+            margin-top: 130px;
+            color: white;
+            font-size: 60px;
+        }
+
+        .carinha p {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .logo{
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+        .logo:hover{
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+    </style>
+    <script>
+        const menulinks = document.querySelectorAll('.menu ul li a');
+        menulinks.forEach(link => {
+            link.addEventListener('click', scrollToSection);
+        });
+        function scrollToSection(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="inicio" class="img-background conteudo"
+        style="background-image: url('http://images.ctfassets.net/s26j9zm7rn0w/6HRie4PA4yTlaQllanzOc9/20811d72af0a05b1ad388db91000af30/ATL_hero.jpg');">
+        <nav class="menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#album">Álbuns</a></li>
+                <li><a href="#lancamento">Lançamento</a></li>
+                <li><a href="#social">Social</a></li>
+            </ul>
+        </nav>
+        <img class="logo" src="https://www.alltimelow.com/sites/g/files/g2000013211/files/2021-12/ZklSoO.tif%402x.png"
+            alt="Imagem 1" />
+    </div>
+
+    <div id="sobre" class="conteudo sobre" style="background-image: url('fundoatl.jpg');">
+        <div class="carinha" style="background-image: url('carinhasemfundo.png');">
+            <h1>QUEM SOMOS</h1>
+            <p>
+                All Time Low é uma banda de pop punk de Baltimore, Maryland, formada em 2003. <br>
+                O nome All Time Low foi retirado da letra da música <br>
+                "Head on Collision", da banda New Found Glory.</p>
+        </div>
+        <div>
+            <img src="integrantes.png">
+        </div>
+    </div>
+
+    <div id="album" class="conteudo">
+        <h1>album </h1>
+    </div>
+
+    <div id="lancamento" class="conteudo">
+        <h1>lancamento </h1>
+    </div>
+
+    <div id="social" class="conteudo">
+        <h1>social </h1>
+    </div>
+
+</body>
+
+</html>
