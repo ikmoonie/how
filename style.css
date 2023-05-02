@@ -1,0 +1,247 @@
+        @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Squada+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Didact+Gothic&family=Squada+One&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .conteudo {
+            height: 100vh;
+        }
+
+        .img-background {
+
+            background-position: center;
+            background-size: cover;
+            background-position-x: ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #27181c;
+            background-repeat: no-repeat;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            border-bottom: 1px solid white;
+            margin-top: 30px;
+            opacity: 0.5;
+            background-color: black;
+            padding: 10px 10px;
+            border-radius: 0 30px 30px 0;
+        }
+
+        .menu ul li {
+            margin-left: 25px;
+            font-size: 25px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Squada One', cursive;
+            font-size: 31px;
+        }
+
+        .sobre {
+            background-size: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .carinha {
+            width: 1350px;
+            height: 600px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+            zoom: 80%;
+        }
+
+        .carinha h1 {
+            margin-top: 130px;
+            color: white;
+            font-size: 60px;
+        }
+
+        .carinha p {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .logo{
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+        .logo:hover{
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        
+        .integrantesfotos{
+            zoom: 90%;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        body {
+            margin: 0;
+            background: #EEE;
+            user-select: none;
+            font-family: sans-serif;
+        }
+
+
+        #slider {
+            position: relative;
+            width: 476px;
+            height: 300px;
+            margin: 0px auto;
+            top: 300px;
+            font-family: 'Helvetica Neue', sans-serif;
+            perspective: 1400px;
+            transform-style: preserve-3d;
+        }
+
+        input[type=radio] {
+            position: relative;
+            top: 108%;
+            left: 50%;
+            width: 18px;
+            height: 18px;
+            margin: 0 30px 0 0;
+            opacity: 0.4;
+            transform: translateX(-83px);
+            cursor: pointer;
+            display: none;
+        }
+
+
+        input[type=radio]:nth-child(5) {
+            margin-right: 0px;
+        }
+
+        input[type=radio]:checked {
+            opacity: 1;
+        }
+
+        #slider label,
+        #slider label img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            color: white;
+            font-size: 70px;
+            font-weight: bold;
+            border-radius: 3px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 400ms ease;
+
+        }
+
+        #slider label h1 {
+            text-align: center;
+            margin-top: 400px;
+            margin-right: 200px;
+            color: white;
+            font-size: 25px;
+        }
+
+        #slider label a{
+            text-decoration: none;
+            text-align: center;
+        }
+
+        #lancamento{
+            background-color: #efecec;
+        }
+        .conteudo{
+            display: flex;
+            justify-content: center;
+        }
+
+        .video{
+            padding-top: 150px;
+        }
+
+        /*#spotify{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+          }*/          
+
+
+        /* Slider Functionality */
+
+        /* Active Slide */
+        #s1:checked~#slide1,
+        #s2:checked~#slide2,
+        #s3:checked~#slide3,
+        #s4:checked~#slide4,
+        #s5:checked~#slide5 {
+            /*box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);*/
+            transform: translate3d(0%, 0, 0px);
+        }
+
+        /* Next Slide */
+        #s1:checked~#slide2,
+        #s2:checked~#slide3,
+        #s3:checked~#slide4,
+        #s4:checked~#slide5,
+        #s5:checked~#slide1 {
+            /*box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);*/
+            transform: translate3d(100%, 0, -300px);
+        }
+
+
+        /* Next to Next Slide */
+        #s1:checked~#slide3,
+        #s2:checked~#slide4,
+        #s3:checked~#slide5,
+        #s4:checked~#slide1,
+        #s5:checked~#slide2 {
+            /*box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);*/
+            transform: translate3d(150%, 0, -350px);
+        }
+
+        /* Previous to Previous Slide */
+        #s1:checked~#slide4,
+        #s2:checked~#slide5,
+        #s3:checked~#slide1,
+        #s4:checked~#slide2,
+        #s5:checked~#slide3 {
+            /*  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);*/
+            transform: translate3d(-150%, 0, -350px);
+        }
+
+        /* Previous Slide */
+        #s1:checked~#slide5,
+        #s2:checked~#slide1,
+        #s3:checked~#slide2,
+        #s4:checked~#slide3,
+        #s5:checked~#slide4 {
+            /*box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);*/
+            transform: translate3d(-100%, 0, -300px);
+        }
