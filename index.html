@@ -10,97 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
 
-        body {
-            margin: 0;
-        }
+    <link type="text/css" href="style.css" rel="stylesheet">
 
-        .conteudo {
-            height: 100vh;
-        }
 
-        .img-background {
-
-            background-position: center;
-            background-size: cover;
-            background-position-x: ;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #27181c;
-            background-repeat: no-repeat;
-        }
-
-        .menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-
-        }
-
-        .menu ul {
-            list-style: none;
-            display: flex;
-            border-bottom: 1px solid white;
-            margin-top: 30px;
-            opacity: 0.5;
-            background-color: black;
-            padding: 10px 10px;
-            border-radius: 0 30px 30px 0;
-        }
-
-        .menu ul li {
-            margin-left: 25px;
-            font-size: 25px;
-        }
-
-        .menu ul li a {
-            text-decoration: none;
-            color: white;
-            font-family: 'Gloria Hallelujah';
-        }
-
-        .sobre {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .carinha {
-            width: 1350px;
-            height: 600px;
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .carinha h1 {
-            margin-top: 130px;
-            color: white;
-            font-size: 60px;
-        }
-
-        .carinha p {
-            font-size: 30px;
-            text-align: center;
-        }
-
-        .logo{
-            transition: all 0.5s;
-            cursor: pointer;
-        }
-
-        .logo:hover{
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-        }
-
-    </style>
     <script>
         const menulinks = document.querySelectorAll('.menu ul li a');
         menulinks.forEach(link => {
@@ -114,6 +27,7 @@
                 behavior: 'smooth'
             });
         }
+        
     </script>
 
 </head>
@@ -134,26 +48,55 @@
             alt="Imagem 1" />
     </div>
 
-    <div id="sobre" class="conteudo sobre" style="background-image: url('fundoatl.jpg');">
+    <div id="sobre" class="conteudo sobre" style="background-image: url('fundoatl.jpg'); background-size: 80%;">
         <div class="carinha" style="background-image: url('carinhasemfundo.png');">
-            <h1>QUEM SOMOS</h1>
-            <p>
+            <h1 style="font-family: 'Bebas Neue', cursive;">QUEM SOMOS</h1>
+            <p style="font-family: 'Didact Gothic', sans-serif;">
                 All Time Low é uma banda de pop punk de Baltimore, Maryland, formada em 2003. <br>
                 O nome All Time Low foi retirado da letra da música <br>
                 "Head on Collision", da banda New Found Glory.</p>
         </div>
-        <div>
-            <img src="integrantes.png">
+        <div id="integrantesbanda">
+            <!--<img src="integrantes.png">-->
+            <ul class="integrantesfotos">
+                <li style="margin-right: 40px;"> <a href="https://www.instagram.com/alexgaskarth/" target="_blank"><img src="img/1 alex.png"></a>  </li>
+    
+               <li style="margin-right: 40x;"> <a href="https://www.instagram.com/jackbarakat/" target="_blank"><img src="img/2 jack.png"></a>  </li>
+    
+               <li style="margin-left: 40px;"> <a href="https://www.instagram.com/zacharymerrick/" target="_blank"><img src="img/3 zack.png"></a>  </li>
+    
+                <li style="margin-left: 40px;"> <a href="https://www.instagram.com/riandawson/" target="_blank"><img src="img/4 rian.png"></a>  </li>
+            </ul>
         </div>
     </div>
 
-    <div id="album" class="conteudo">
-        <h1>album </h1>
+    <div id="album" class="conteudo"
+    style="background-image: url('img/bg-album-logo.jpg'); background-size: 100%;">
+        <section id="slider">
+            <input type="radio" name="slider" id="s1">
+            <input type="radio" name="slider" id="s2" checked>
+            <input type="radio" name="slider" id="s3">
+
+            <label for="s1" id="slide1"><img src="img/1 oie_transparent (2).png" alt="">
+            <a href="https://open.spotify.com/album/7b3JowMC8FK0nToMlD4H1d" target="_blank"><h1>DON'T PANIC: <br>IT'S LONGER NOW!</h1></a>
+            </label>
+            <label for="s2" id="slide2"><img src="img/2 oie_transparent.png" alt="">
+            <a href="https://open.spotify.com/album/1AFqm29Q9IdjXcnZVCGrDj?si=1e2_HdcMRS6rbySjU3BFTA" target="_blank"><h1>SO WRONG, IT'S RIGHT</h1></a>
+            </label>
+             <label for="s3" id="slide3"><img src="img/3oie_transparent (2).png" alt="">
+            <a href="https://open.spotify.com/album/7tY7NcC2gKTxXsTJM6zK5I?si=mxdrYARRQnegBbn2Lp-law" target="_blank"><h1>NOTHING PERSONAL</h1></a>
+            </label>  
+            <div class="spotify" style="position: absolute; bottom: 0; left: 0; top: 500px; width: 100%; display: flex; justify-content: center; margin-bottom: 20px;">
+                <a href="https://open.spotify.com/artist/46gyXjRIvN1NL1eCB8GBxo?si=AE9u_4hLQq2Q6rUcEdxSAA"><img src="img/logo-spotify.png" style="width: 300px; height: auto;"></a>
+            </div>  
+        </section>
+
     </div>
 
     <div id="lancamento" class="conteudo">
-        <h1>lancamento </h1>
+        <iframe class="video" width="1256" height="663" src="https://www.youtube.com/embed/b8OnjZlxEOE" title="All Time Low: Modern Love [OFFICIAL VIDEO]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
+    
 
     <div id="social" class="conteudo">
         <h1>social </h1>
