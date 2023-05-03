@@ -18,7 +18,6 @@
 
             background-position: center;
             background-size: cover;
-            background-position-x: ;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -259,8 +258,9 @@
             justify-content: center;
             align-items: center;
             margin-top: 50px;
-            transition: height 1s ease-in-out;
+            transition: all 1s ease-in-out;
             flex-direction: column;
+            font-size: 30px;            
         }
         .rodape ul{
             list-style: none;
@@ -274,7 +274,7 @@
         }
         .rodape ul li a{
             text-decoration: none;
-            font-size: 30px;
+
             color: white;
             font-family: 'Squada One', cursive;
         }
