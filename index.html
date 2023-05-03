@@ -10,25 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet">
 
     <link type="text/css" href="style.css" rel="stylesheet">
 
 
-    <script>
-        const menulinks = document.querySelectorAll('.menu ul li a');
-        menulinks.forEach(link => {
-            link.addEventListener('click', scrollToSection);
-        });
-        function scrollToSection(event) {
-            event.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            targetSection.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-        
-    </script>
 
 </head>
 
@@ -37,11 +23,11 @@
         style="background-image: url('http://images.ctfassets.net/s26j9zm7rn0w/6HRie4PA4yTlaQllanzOc9/20811d72af0a05b1ad388db91000af30/ATL_hero.jpg');">
         <nav class="menu">
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#album">Álbuns</a></li>
-                <li><a href="#lancamento">Lançamento</a></li>
-                <li><a href="#social">Social</a></li>
+                <li><a href="#inicio" onclick="esconderSocial()">Inicio</a></li>
+                <li><a href="#sobre" onclick="esconderSocial()">Sobre</a></li>
+                <li><a href="#album" onclick="esconderSocial()">Álbuns</a></li>
+                <li><a href="#lancamento" onclick="esconderSocial()">Lançamento</a></li>
+                <li><a href="#lancamento" onclick="exibirSocial()">Social</a></li>
             </ul>
         </nav>
         <img class="logo" src="https://www.alltimelow.com/sites/g/files/g2000013211/files/2021-12/ZklSoO.tif%402x.png"
@@ -95,12 +81,51 @@
 
     <div id="lancamento" class="conteudo">
         <iframe class="video" width="1256" height="663" src="https://www.youtube.com/embed/b8OnjZlxEOE" title="All Time Low: Modern Love [OFFICIAL VIDEO]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+        <div class="rodape">
+            <ul>
+                <li><a href="#inicio"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                <li><a href="https://www.instagram.com/alltimelow/" target="_blank"><i class="fa-brands fa-square-instagram"></i> Instagram</a></li>
+                <li><a href="https://twitter.com/AllTimeLow" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://www.youtube.com/user/alltimelow" target="_blank"><i class="fa-brands fa-youtube"></i> Youtube</a></li>    
+                <li><a href="https://open.spotify.com/artist/46gyXjRIvN1NL1eCB8GBxo?si=prj3TKtRQCSkN43in_KVbQ&nd=1"><i class="fa-brands fa-spotify"></i> Spotify</a></li>
+            </ul>
+            <p>© Copyright 2023 Ana & Gabriel</p>
+        </div>
+
     </div>
     
+    
+    <script>
+        const menulinks = document.querySelectorAll('.menu ul li a');
+        menulinks.forEach(link => {
+            link.addEventListener('click', scrollToSection);
+        });
+        function scrollToSection(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        function exibirSocial() {
+            let divRodape = document.querySelector(".rodape");
+            divRodape.style.height = "300px";
+            let divVideo = document.querySelector(".video");
+            divVideo.style.width = "628px";
+            divVideo.style.height = "331px";
+        }
+        
+        function esconderSocial() {
+            let divRodape = document.querySelector(".rodape");
+            divRodape.style.height = "100px";
+            let divVideo = document.querySelector(".video");
+            divVideo.style.width = "1256px";
+            divVideo.style.height = "663px";
+        }
 
-    <div id="social" class="conteudo">
-        <h1>social </h1>
-    </div>
+    </script>
 
 </body>
 
